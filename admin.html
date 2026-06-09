@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Admin Panel</h2>
+
+<form action="/add_product" method="POST">
+
+Product Name:
+<input type="text" name="name">
+
+Price:
+<input type="number" name="price">
+
+<button>Add Product</button>
+
+</form>
+
+<hr>
+
+{% for p in products %}
+<p>{{p[1]}} - ₹{{p[2]}}</p>
+{% endfor %}
+
+</body>
+</html>
